@@ -123,29 +123,82 @@ export default function InsuredElasticBeanstalk() {
         </div>
       </div>
 
-      {/* Technologies Used */}
+      {/* Technologies & Skills Used */}
       <div className="card space-y-6">
-        <h2 className="text-3xl font-bold text-white">Technologies Used</h2>
-        <div className="flex flex-wrap gap-3">
-          {[
-            "AWS Elastic Beanstalk",
-            "Amazon RDS",
-            "EC2",
-            "CloudFormation",
-            "IAM",
-            "VPC",
-            "CloudWatch",
-            "S3",
-            "Route 53",
-            "ACM"
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-300 font-medium"
-            >
-              {tech}
-            </span>
-          ))}
+        <h2 className="text-3xl font-bold text-white">Technologies & Skills Used</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">AWS Platform Services</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• AWS Elastic Beanstalk</li>
+              <li>• Platform Versions</li>
+              <li>• Environment Configuration</li>
+              <li>• EB CLI</li>
+              <li>• Application Versions</li>
+              <li>• Environment Tiers</li>
+              <li>• Managed Updates</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Compute & Scaling</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• EC2 Instances</li>
+              <li>• Auto Scaling</li>
+              <li>• Load Balancing</li>
+              <li>• Health Monitoring</li>
+              <li>• Capacity Planning</li>
+              <li>• Instance Profiles</li>
+              <li>• Rolling Deployments</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Database & Storage</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Amazon RDS</li>
+              <li>• PostgreSQL/MySQL</li>
+              <li>• Multi-AZ RDS</li>
+              <li>• Database Security</li>
+              <li>• Amazon S3</li>
+              <li>• Backup Strategies</li>
+              <li>• Point-in-Time Recovery</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Infrastructure as Code</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• AWS CloudFormation</li>
+              <li>• .ebextensions</li>
+              <li>• Configuration Files</li>
+              <li>• Environment Properties</li>
+              <li>• Resource Management</li>
+              <li>• Stack Templates</li>
+              <li>• Change Sets</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Networking & Security</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• VPC Configuration</li>
+              <li>• Security Groups</li>
+              <li>• IAM Roles & Policies</li>
+              <li>• SSL/TLS (ACM)</li>
+              <li>• Route 53</li>
+              <li>• Private Subnets</li>
+              <li>• NAT Gateway</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Monitoring & Operations</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• CloudWatch</li>
+              <li>• EB Enhanced Monitoring</li>
+              <li>• Log Streaming</li>
+              <li>• Alarms & Notifications</li>
+              <li>• X-Ray Integration</li>
+              <li>• Health Dashboards</li>
+              <li>• Cost Optimization</li>
+            </ul>
+          </div>
         </div>
       </div>
 

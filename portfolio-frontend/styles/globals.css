@@ -11,19 +11,18 @@ body,
 }
 
 body {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  color: #f8fafc;
+  background: #f5f5f5;
+  color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  transition: background 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+  transition: background 0.3s ease, color 0.3s ease;
   letter-spacing: -0.01em;
 }
 
 body.dark {
-  background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
-  color: #f8fafc;
+  background: #000000;
+  color: #e5e5e5;
 }
 
 a {
@@ -32,23 +31,31 @@ a {
 }
 
 .btn {
-  @apply inline-block rounded-lg px-6 py-3 font-medium shadow-lg transition-all duration-300 hover:shadow-xl;
+  @apply inline-block rounded-lg px-4 py-2 sm:px-6 sm:py-3 font-medium shadow-lg transition-all duration-300 hover:shadow-xl;
 }
 
 .btn-primary {
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-xl;
+  @apply bg-gradient-to-r from-gray-400 to-gray-600 text-white hover:from-gray-500 hover:to-gray-700 shadow-xl;
+}
+
+body.dark .btn-primary {
+  @apply bg-gradient-to-r from-gray-700 to-gray-900 text-white hover:from-gray-600 hover:to-gray-800;
 }
 
 .btn-outline {
-  @apply border-2 border-cyan-400/50 text-cyan-300 bg-cyan-500/10 backdrop-blur-sm hover:bg-cyan-500/20 hover:border-cyan-400;
+  @apply border-2 border-gray-400/50 text-gray-700 bg-gray-300/10 backdrop-blur-sm hover:bg-gray-300/20 hover:border-gray-500;
+}
+
+body.dark .btn-outline {
+  @apply border-2 border-gray-500/50 text-gray-300 bg-gray-700/10 hover:bg-gray-700/20 hover:border-gray-400;
 }
 
 .card {
-  @apply bg-slate-800/80 backdrop-blur-md rounded-2xl shadow-2xl p-6 transition-all duration-300 hover:shadow-cyan-500/50 hover:-translate-y-2 border border-cyan-500/20;
+  @apply bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-6 transition-all duration-300 hover:shadow-gray-400/50 hover:-translate-y-2 border border-gray-300/50;
 }
 
 body.dark .card {
-  @apply bg-slate-900/90 border-cyan-400/20 text-white hover:shadow-cyan-400/50;
+  @apply bg-gray-900/80 border-gray-700/50 text-white hover:shadow-gray-500/50;
 }
 
 /* Animations */
@@ -104,18 +111,52 @@ body.dark .card {
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 animate-gradient;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 animate-gradient;
 }
 
 body.dark .gradient-text {
-  @apply from-cyan-300 via-blue-400 to-indigo-400;
+  @apply from-gray-300 via-gray-400 to-gray-500;
 }
 
 /* Glassmorphism */
 .glass {
-  @apply bg-slate-800/40 backdrop-blur-lg border border-cyan-500/20 shadow-xl;
+  @apply bg-white/60 backdrop-blur-lg border border-gray-300/50 shadow-xl;
 }
 
 body.dark .glass {
-  @apply bg-slate-900/50 border-cyan-400/20;
+  @apply bg-gray-900/40 border-gray-700/30;
+}
+
+/* Skill card hover animation */
+.skill-progress {
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card .skill-progress {
+  animation: skillFillInitial 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes skillFillInitial {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* On hover, reset and animate again */
+.skill-card:hover .skill-progress {
+  animation: skillFillHover 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes skillFillHover {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--target-width);
+  }
 }

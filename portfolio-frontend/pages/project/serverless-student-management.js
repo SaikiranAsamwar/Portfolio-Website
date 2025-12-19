@@ -8,7 +8,7 @@ export default function ServerlessStudentManagement() {
       {/* Back Button */}
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+        className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -24,7 +24,7 @@ export default function ServerlessStudentManagement() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
               Serverless Student Management System
             </h1>
-            <p className="text-xl text-cyan-400">AWS Lambda • API Gateway • DynamoDB • S3</p>
+            <p className="text-xl text-gray-400">AWS Lambda • API Gateway • DynamoDB • S3</p>
           </div>
         </div>
 
@@ -123,27 +123,82 @@ export default function ServerlessStudentManagement() {
         </div>
       </div>
 
-      {/* Technologies Used */}
+      {/* Technologies & Skills Used */}
       <div className="card space-y-6">
-        <h2 className="text-3xl font-bold text-white">Technologies Used</h2>
-        <div className="flex flex-wrap gap-3">
-          {[
-            "AWS Lambda",
-            "API Gateway",
-            "DynamoDB",
-            "S3",
-            "Python",
-            "CloudFormation",
-            "IAM",
-            "CloudWatch"
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-300 font-medium"
-            >
-              {tech}
-            </span>
-          ))}
+        <h2 className="text-3xl font-bold text-white">Technologies & Skills Used</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Programming & Runtime</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Python 3.x</li>
+              <li>• AWS Lambda</li>
+              <li>• Boto3 SDK</li>
+              <li>• Lambda Layers</li>
+              <li>• Event-Driven Architecture</li>
+              <li>• Async/Await Patterns</li>
+              <li>• Error Handling</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">AWS Services</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• AWS Lambda</li>
+              <li>• API Gateway</li>
+              <li>• DynamoDB</li>
+              <li>• S3</li>
+              <li>• CloudWatch</li>
+              <li>• IAM</li>
+              <li>• CloudFormation</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">API & Integration</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• RESTful APIs</li>
+              <li>• API Gateway REST</li>
+              <li>• Lambda Proxy Integration</li>
+              <li>• CORS Configuration</li>
+              <li>• API Authorization</li>
+              <li>• Request Validation</li>
+              <li>• Response Mapping</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Database & Storage</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• DynamoDB</li>
+              <li>• NoSQL Design Patterns</li>
+              <li>• Partition Keys</li>
+              <li>• GSI/LSI</li>
+              <li>• S3 Bucket Management</li>
+              <li>• S3 Lifecycle Policies</li>
+              <li>• Data Modeling</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Infrastructure as Code</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• AWS CloudFormation</li>
+              <li>• SAM (Serverless Application Model)</li>
+              <li>• Serverless Framework</li>
+              <li>• YAML/JSON Templates</li>
+              <li>• Stack Management</li>
+              <li>• Resource Policies</li>
+              <li>• Parameter Store</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Monitoring & Security</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• CloudWatch Logs</li>
+              <li>• CloudWatch Metrics</li>
+              <li>• X-Ray Tracing</li>
+              <li>• IAM Policies</li>
+              <li>• Lambda Permissions</li>
+              <li>• Encryption at Rest</li>
+              <li>• Secrets Manager</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -151,28 +206,28 @@ export default function ServerlessStudentManagement() {
       <div className="card space-y-6">
         <h2 className="text-3xl font-bold text-white">Architecture & Implementation</h2>
         <div className="space-y-4">
-          <div className="border-l-4 border-cyan-500 pl-6 py-2">
+          <div className="border-l-4 border-gray-600 pl-6 py-2">
             <h3 className="text-xl font-semibold text-white mb-2">1. API Gateway</h3>
             <p className="text-slate-300">
               RESTful API endpoints for all student operations, with request validation 
               and CORS configuration for secure cross-origin access.
             </p>
           </div>
-          <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <div className="border-l-4 border-gray-700 pl-6 py-2">
             <h3 className="text-xl font-semibold text-white mb-2">2. Lambda Functions</h3>
             <p className="text-slate-300">
               Python-based Lambda functions handle business logic for each operation, 
               with optimized cold start performance and error handling.
             </p>
           </div>
-          <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <div className="border-l-4 border-gray-500 pl-6 py-2">
             <h3 className="text-xl font-semibold text-white mb-2">3. DynamoDB Tables</h3>
             <p className="text-slate-300">
               Single-table design with efficient indexes for fast queries, auto-scaling 
               for read/write capacity, and point-in-time recovery enabled.
             </p>
           </div>
-          <div className="border-l-4 border-purple-500 pl-6 py-2">
+          <div className="border-l-4 border-gray-400 pl-6 py-2">
             <h3 className="text-xl font-semibold text-white mb-2">4. S3 Buckets</h3>
             <p className="text-slate-300">
               Secure file storage with versioning, lifecycle policies, and pre-signed 
@@ -210,20 +265,20 @@ export default function ServerlessStudentManagement() {
       </div>
 
       {/* Results */}
-      <div className="card bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/30">
+      <div className="card bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/30">
         <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-slate-300">Uptime Achieved</div>
+            <div className="text-4xl font-bold text-gray-300 mb-2">99.9%</div>
+            <div className="text-gray-400">Uptime Achieved</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
-            <div className="text-slate-300">Cost Reduction</div>
+            <div className="text-4xl font-bold text-gray-300 mb-2">60%</div>
+            <div className="text-gray-400">Cost Reduction</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">&lt;200ms</div>
-            <div className="text-slate-300">Avg Response Time</div>
+            <div className="text-4xl font-bold text-gray-300 mb-2">&lt;200ms</div>
+            <div className="text-gray-400">Avg Response Time</div>
           </div>
         </div>
       </div>

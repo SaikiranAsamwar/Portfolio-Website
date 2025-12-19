@@ -123,29 +123,82 @@ export default function QuickLoanAutoScaling() {
         </div>
       </div>
 
-      {/* Technologies Used */}
+      {/* Technologies & Skills Used */}
       <div className="card space-y-6">
-        <h2 className="text-3xl font-bold text-white">Technologies Used</h2>
-        <div className="flex flex-wrap gap-3">
-          {[
-            "AWS EC2",
-            "Auto Scaling Groups",
-            "Elastic Load Balancer",
-            "Amazon RDS",
-            "CloudWatch",
-            "VPC",
-            "Security Groups",
-            "IAM",
-            "Route 53",
-            "SNS"
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-300 font-medium"
-            >
-              {tech}
-            </span>
-          ))}
+        <h2 className="text-3xl font-bold text-white">Technologies & Skills Used</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">AWS Compute & Scaling</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Amazon EC2</li>
+              <li>• Auto Scaling Groups</li>
+              <li>• Launch Templates</li>
+              <li>• AMI Management</li>
+              <li>• Instance Types</li>
+              <li>• Scaling Policies</li>
+              <li>• Target Tracking</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Load Balancing & Networking</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Application Load Balancer</li>
+              <li>• Target Groups</li>
+              <li>• Health Checks</li>
+              <li>• VPC Configuration</li>
+              <li>• Subnets (Public/Private)</li>
+              <li>• Route Tables</li>
+              <li>• Internet Gateway</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Database & Storage</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Amazon RDS</li>
+              <li>• Multi-AZ Deployment</li>
+              <li>• Read Replicas</li>
+              <li>• Automated Backups</li>
+              <li>• Database Performance</li>
+              <li>• EBS Volumes</li>
+              <li>• Snapshot Management</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Monitoring & Alerts</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Amazon CloudWatch</li>
+              <li>• Custom Metrics</li>
+              <li>• CloudWatch Alarms</li>
+              <li>• SNS Notifications</li>
+              <li>• Log Groups</li>
+              <li>• Dashboards</li>
+              <li>• Performance Insights</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">Security & Access</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Security Groups</li>
+              <li>• NACLs</li>
+              <li>• IAM Roles & Policies</li>
+              <li>• Key Pairs</li>
+              <li>• AWS Secrets Manager</li>
+              <li>• SSL/TLS Certificates</li>
+              <li>• ACM</li>
+            </ul>
+          </div>
+          <div className="p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <h3 className="text-cyan-400 font-semibold mb-3">DNS & Deployment</h3>
+            <ul className="space-y-1 text-slate-300 text-sm">
+              <li>• Route 53</li>
+              <li>• DNS Management</li>
+              <li>• User Data Scripts</li>
+              <li>• CloudFormation</li>
+              <li>• Terraform</li>
+              <li>• Blue-Green Deployment</li>
+              <li>• Rolling Updates</li>
+            </ul>
+          </div>
         </div>
       </div>
 

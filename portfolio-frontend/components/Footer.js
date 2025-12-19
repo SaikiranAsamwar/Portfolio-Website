@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Quick Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* Expertise */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 sm:mb-4">Expertise</h4>
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
               <li>AWS Cloud Services</li>
@@ -68,9 +68,9 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 sm:mb-4">Connect</h4>
-            <div className="flex gap-3 sm:gap-4 justify-center md:justify-start">
+            <div className="flex gap-3 sm:gap-4 justify-center">
               <a 
                 href="https://github.com/SaikiranAsamwar" 
                 target="_blank" 

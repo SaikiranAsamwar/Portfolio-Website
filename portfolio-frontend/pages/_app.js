@@ -6,15 +6,19 @@ import WelcomeScreen from "../components/WelcomeScreen";
 import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    if (savedTheme === "light") {
+      setDarkMode(false);
+      document.body.classList.remove("dark");
+    } else {
       setDarkMode(true);
       document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 

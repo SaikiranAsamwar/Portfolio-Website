@@ -1,152 +1,390 @@
-# Saikiran Asamwar - Portfolio Website
+# 🚀 Saikiran Asamwar - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, showcasing AWS DevOps expertise, certifications, and projects.
+<div align="center">
 
-## 🚀 Tech Stack
+![Portfolio Banner](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-- **Framework:** Next.js 14
-- **Styling:** Tailwind CSS
-- **Language:** JavaScript/React
-- **Deployment Ready:** Vercel, AWS Amplify, or any Node.js host
+**A modern, responsive portfolio website showcasing AWS DevOps expertise, certifications, and real-world projects.**
+
+[Live Demo](#) • [Report Bug](https://github.com/SaikiranAsamwar/Portfolio-Website/issues) • [Request Feature](https://github.com/SaikiranAsamwar/Portfolio-Website/issues)
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Quick Start](#quick-start)
+- [Email Configuration](#email-configuration)
+- [Deployment](#deployment)
+- [Project Structure](#project-structure)
+- [Customization](#customization)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## 🎯 About
+
+This is a professional portfolio website built for showcasing AWS DevOps engineering skills, certifications, and project work. It features a clean, modern design with dark/light mode support, animated components, and a fully functional contact form with email integration.
+
+**Key Highlights:**
+- 🏆 AWS Certified Solutions Architect - Associate
+- ⚙️ DevOps & Cloud Engineering Focus
+- 🔧 6+ Real-world Project Showcases
+- 📜 Professional Certifications Display
+- 📧 Integrated Contact System
+
+---
 
 ## ✨ Features
 
-- 🌓 Dark/Light mode toggle with persistent theme
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- ⚡ Fast loading with Next.js optimizations
-- 🎨 Modern glassmorphism UI design
-- 📧 Contact form integration ready
-- 🎯 SEO optimized with meta tags
-- ♿ Accessibility features (ARIA labels, semantic HTML)
-- 🎭 Smooth animations and transitions
-- 📊 Project showcase with detailed pages
-- 🏆 Certifications display with credentials
+### 🎨 Design & UI
+- 🌓 **Dark/Light Mode** - Smooth theme toggle with localStorage persistence
+- 📱 **Fully Responsive** - Optimized for mobile, tablet, and desktop
+- 🎭 **Smooth Animations** - Floating elements, gradient effects, and transitions
+- 🪟 **Glassmorphism UI** - Modern frosted glass design elements
+- 🎬 **Welcome Screen** - Professional animated landing experience
 
-## 📋 Prerequisites
+### 🛠️ Functionality
+- 📧 **Contact Form** - Gmail SMTP integration with Nodemailer
+- 🔗 **Project Details** - Individual pages for each project with tech stacks
+- 🏆 **Certifications** - Display with credential verification links
+- 🎯 **SEO Optimized** - Comprehensive meta tags and descriptions
+- ⚡ **Performance** - Next.js optimizations and lazy loading
+- ♿ **Accessible** - ARIA labels and semantic HTML
 
-- Node.js 18+ installed
-- npm or yarn package manager
+### 📊 Content Sections
+- **Hero Section** - Professional introduction with certifications
+- **Experience** - DevOps internship details and responsibilities
+- **Featured Projects** - 6 production-ready AWS/DevOps projects
+- **Skills** - Technical expertise with documentation links
+- **About Me** - Detailed professional background
+- **Contact** - Multi-channel communication options
 
-## 🛠️ Installation
+---
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd portfolio-frontend
-```
+## 💻 Tech Stack
 
-2. Install dependencies:
-```bash
-npm install
-```
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | Next.js 14, React 18, JavaScript |
+| **Styling** | Tailwind CSS, Custom CSS animations |
+| **Email** | Nodemailer with Gmail SMTP |
+| **Deployment** | Vercel, AWS Amplify, Docker-ready |
+| **Version Control** | Git & GitHub |
 
-3. Run the development server:
-```bash
-npm run dev
-```
+---
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+## 🚀 Quick Start
 
-## 📦 Build for Production
+### Prerequisites
+
+- Node.js 18+ ([Download](https://nodejs.org/))
+- npm or yarn
+- Gmail account (for contact form)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SaikiranAsamwar/Portfolio-Website.git
+   cd Portfolio-Website/portfolio-frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   Edit `.env.local` with your Gmail credentials (see [Email Configuration](#email-configuration))
+
+4. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
 
 ```bash
 npm run build
 npm start
 ```
 
-## 🎨 Customization
+---
 
-### Update Personal Information
+## 📧 Email Configuration
 
-1. **Home Page** - Edit `pages/index.js`
-2. **About Page** - Edit `pages/about.js`
-3. **Projects** - Update project data in `pages/index.js` and `pages/projects.js`
-4. **Certifications** - Modify certification data in `pages/certifications.js`
-5. **Contact Info** - Update in `pages/contact.js`
+The contact form uses Gmail SMTP to send emails. Follow these steps:
 
-### Add Your Avatar
+### Step 1: Enable 2-Step Verification
+1. Go to [Google Account Security](https://myaccount.google.com/security)
+2. Enable **2-Step Verification**
 
-Place your profile image as `avatar.png` in the `public/` folder
+### Step 2: Generate App Password
+1. Visit [Google App Passwords](https://myaccount.google.com/apppasswords)
+2. Select **Mail** and **Other (Custom name)**
+3. Enter "Portfolio Website"
+4. Copy the 16-character password
 
-### Modify Theme Colors
+### Step 3: Update .env.local
+```env
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-16-character-app-password
+```
 
-Edit `tailwind.config.js` and `styles/globals.css` to customize colors
+### Step 4: Restart Server
+```bash
+npm run dev
+```
 
-## 📧 Contact Form Setup
+📖 **Detailed Guide:** See [EMAIL_SETUP_GUIDE.md](./EMAIL_SETUP_GUIDE.md)
 
-The contact form (`components/ContactForm.js`) currently logs to console. To make it functional:
+---
 
-1. Set up SendGrid, AWS SES, or similar email service
-2. Update `pages/api/contact.js` with your email service credentials
-3. Add environment variables for API keys
+## 🌐 Deployment
 
-## 🚀 Deployment
+### Option 1: Vercel (Recommended)
 
-### Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SaikiranAsamwar/Portfolio-Website)
+
+**Manual Deployment:**
 ```bash
 npm install -g vercel
 vercel
 ```
 
-### AWS Amplify
-1. Connect your GitHub repository
-2. Configure build settings (auto-detected)
-3. Deploy
+**Environment Variables:**
+- Add `EMAIL_USER` and `EMAIL_PASS` in Vercel dashboard
+- Settings → Environment Variables
 
-### Docker
+### Option 2: AWS Amplify
+
+1. Connect GitHub repository
+2. Build settings (auto-detected):
+   ```yaml
+   version: 1
+   frontend:
+     phases:
+       preBuild:
+         commands:
+           - cd portfolio-frontend
+           - npm ci
+       build:
+         commands:
+           - npm run build
+     artifacts:
+       baseDirectory: portfolio-frontend/.next
+       files:
+         - '**/*'
+     cache:
+       paths:
+         - portfolio-frontend/node_modules/**/*
+   ```
+3. Add environment variables in Amplify console
+
+### Option 3: Docker
+
+**Build image:**
 ```bash
-docker build -t portfolio .
-docker run -p 3000:3000 portfolio
+docker build -t portfolio-website .
 ```
 
-## 📄 Project Structure
+**Run container:**
+```bash
+docker run -p 3000:3000 \
+  -e EMAIL_USER=your-email@gmail.com \
+  -e EMAIL_PASS=your-app-password \
+  portfolio-website
+```
+
+---
+
+## 📁 Project Structure
 
 ```
 portfolio-frontend/
-├── components/          # Reusable React components
-│   ├── Nav.js          # Navigation bar
-│   ├── Hero.js         # Hero section
-│   ├── Footer.js       # Footer component
-│   ├── Skills.js       # Skills display
-│   ├── ProjectCard.js  # Project card component
-│   ├── ContactForm.js  # Contact form
-│   └── WelcomeScreen.js # Welcome animation
-├── pages/              # Next.js pages
-│   ├── _app.js        # App wrapper
-│   ├── index.js       # Home page
-│   ├── about.js       # About page
-│   ├── projects.js    # Projects page
-│   ├── certifications.js # Certifications page
-│   ├── contact.js     # Contact page
-│   ├── api/           # API routes
-│   ├── project/       # Individual project pages
-│   └── certification/ # Individual certification pages
-├── public/            # Static assets
-├── styles/            # Global styles
-│   └── globals.css    # Main stylesheet
-├── tailwind.config.js # Tailwind configuration
-├── next.config.js     # Next.js configuration
-└── package.json       # Dependencies
+├── 📂 components/          # Reusable React components
+│   ├── ContactForm.js     # Contact form with email
+│   ├── Footer.js          # Footer with links
+│   ├── Hero.js            # Hero section
+│   ├── Nav.js             # Navigation bar
+│   ├── ProjectCard.js     # Project cards
+│   ├── Skills.js          # Skills showcase
+│   └── WelcomeScreen.js   # Animated welcome
+├── 📂 pages/              # Next.js pages & routing
+│   ├── _app.js           # App wrapper & theme
+│   ├── index.js          # Home page
+│   ├── about.js          # About page
+│   ├── projects.js       # Projects listing
+│   ├── certifications.js # Certifications
+│   ├── contact.js        # Contact page
+│   ├── 404.js            # Custom error page
+│   ├── 📂 api/           # API routes
+│   │   └── contact.js    # Email sending API
+│   ├── 📂 project/       # Project details
+│   │   ├── nodejs-media-compressor.js
+│   │   ├── task-manager-python.js
+│   │   ├── java-shopnow.js
+│   │   ├── serverless-student-management.js
+│   │   ├── quickloan-autoscaling.js
+│   │   └── insured-elastic-beanstalk.js
+│   └── 📂 certification/ # Certification details
+│       ├── saa-c03.js
+│       ├── aws-course.js
+│       └── devops-tools.js
+├── 📂 public/            # Static assets
+│   ├── avatar.png        # Profile image
+│   ├── resume.pdf        # Resume/CV
+│   └── favicon.ico       # Site favicon
+├── 📂 styles/            # Stylesheets
+│   └── globals.css       # Global styles & animations
+├── 📄 .env.example       # Environment variables template
+├── 📄 .env.local         # Local environment (not committed)
+├── 📄 .gitignore         # Git ignore rules
+├── 📄 tailwind.config.js # Tailwind configuration
+├── 📄 next.config.js     # Next.js configuration
+├── 📄 package.json       # Dependencies
+├── 📄 README.md          # This file
+└── 📄 EMAIL_SETUP_GUIDE.md # Email setup instructions
 ```
 
-## 🌟 Features to Add (Optional)
+---
 
-- [ ] Blog section
-- [ ] Newsletter subscription
-- [ ] Analytics integration (Google Analytics, Plausible)
-- [ ] Performance monitoring
-- [ ] CMS integration (Contentful, Sanity)
-- [ ] Automated testing
+## 🎨 Customization
+
+### Update Personal Information
+
+| File | Content |
+|------|---------|
+| `pages/index.js` | Home page, featured projects, about section |
+| `pages/about.js` | Professional experience, education |
+| `pages/projects.js` | Project listings and data |
+| `pages/certifications.js` | Certifications and achievements |
+| `components/Hero.js` | Personal intro, social links |
+| `components/Footer.js` | Footer links and info |
+
+### Modify Theme Colors
+
+**Tailwind Config** (`tailwind.config.js`):
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: "#YOUR_COLOR",
+      accent: "#YOUR_COLOR",
+    },
+  },
+}
+```
+
+**Global Styles** (`styles/globals.css`):
+- Update gradient colors
+- Modify dark mode colors
+- Customize animations
+
+### Add Your Assets
+
+- **Profile Image:** Replace `public/avatar.png`
+- **Resume:** Replace `public/resume.pdf`
+- **Favicon:** Replace `public/favicon.ico`
+
+---
+
+## 📸 Screenshots
+
+<details>
+<summary>Click to expand</summary>
+
+### Home Page
+![Home Page - Light Mode](#)
+![Home Page - Dark Mode](#)
+
+### Projects Section
+![Projects](#)
+
+### Certifications
+![Certifications](#)
+
+### Contact Form
+![Contact](#)
+
+</details>
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 👤 Author
 
 **Saikiran Asamwar**
-- AWS Certified Solutions Architect - Associate
-- DevOps & Cloud Engineer
+
+- 🎓 AWS Certified Solutions Architect - Associate
+- 💼 DevOps & Cloud Engineer
+- 🎯 Specializing in CI/CD, Kubernetes, Docker, Terraform
+
+### 📫 Connect With Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/saikiran-asamwar)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SaikiranAsamwar)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:saikiranasamwar@gmail.com)
+[![Docker Hub](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/u/saikiranasamwar4)
+
+---
+
+## 🌟 Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+## 📊 Project Stats
+
+![GitHub last commit](https://img.shields.io/github/last-commit/SaikiranAsamwar/Portfolio-Website?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/SaikiranAsamwar/Portfolio-Website?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/SaikiranAsamwar/Portfolio-Website?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/SaikiranAsamwar/Portfolio-Website?style=flat-square)
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Saikiran Asamwar**
+
+Portfolio • AWS • DevOps • Cloud Engineering
+
+</div>
 
 ## 🤝 Contributing
 

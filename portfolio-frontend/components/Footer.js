@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="text-center">
             <h4 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 sm:mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm list-none">
               <li>
                 <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
                   Home
@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Expertise */}
           <div className="text-center">
             <h4 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 sm:mb-4">Expertise</h4>
-            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300 list-none">
               <li>AWS Cloud Services</li>
               <li>Kubernetes & Docker</li>
               <li>Terraform & Ansible</li>
